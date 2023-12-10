@@ -4,7 +4,6 @@
 -- See the kickstart.nvim README for more information
 
 -----------------------------------------------------------
-
 -- Custom directory navigation commands
 vim.api.nvim_create_user_command('Cont', 'cd $HOME/code/contributions', {})
 vim.api.nvim_create_user_command('Gist', 'cd $HOME/code/gists', {})
@@ -90,4 +89,13 @@ return {
   {
     'nvim-telescope/telescope-file-browser.nvim',
   },
+    {
+    'windwp/nvim-autopairs',
+  },
+
+{
+    'windwp/nvim-autopairs',
+    event = "InsertEnter",
+    opts = {} -- this is equalent to setup({}) function
+}
 }
