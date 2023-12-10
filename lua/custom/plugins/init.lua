@@ -4,9 +4,21 @@
 -- See the kickstart.nvim README for more information
 
 -----------------------------------------------------------
+
+-- Custom directory navigation commands
+vim.api.nvim_create_user_command('Cont', 'cd $HOME/code/contributions', {})
+vim.api.nvim_create_user_command('Gist', 'cd $HOME/code/gists', {})
+vim.api.nvim_create_user_command('Proj', 'cd $HOME/code/projects', {})
+vim.api.nvim_create_user_command('Temp', 'cd $HOME/code/temp', {})
+vim.api.nvim_create_user_command('Trai', 'cd $HOME/code/training', {})
+
+-- Rest of your custom.lua content...
 --Settings
 -- Increase distance between line numbers and edge
 vim.wo.numberwidth = 4
+
+-- Always open Netrw with Tree style
+vim.g.netrw_liststyle = 3
 
 -- Set the shell option - neovim can read .bash_profile file
 vim.opt.shell = "/bin/bash -l"
